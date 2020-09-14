@@ -59,7 +59,7 @@ click
 ```
 
 ### `Group.createLabel(text: string, options?)`
-#### Returns a new Icon object
+#### Returns a new Label object
 #### Methods
 ```
 set(content: string) // Changes the text of the label
