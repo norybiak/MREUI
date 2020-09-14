@@ -3,7 +3,8 @@
 ## Install
 Download source
 
-Then `npm install`
+`npm install`
+`npm run build`
 
 Copy / paste the iconPacks into your public folder. This library comes with a basic pack for creating media player UI. This library assumes the pack folder contains `icons.png` and `planes.glb`. Custom names for these assets is not yet available.
 
