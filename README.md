@@ -26,7 +26,7 @@ const icon = group.createIcon(MREUI.MediaIcons.Play, {
 	position: { x: 1 }
 }).addBehavior('released', () => play())
 
-const label = this.mediaContainer.createLabel('Play', {
+const label = group.createLabel('Play', {
 	position: { x: 1, y: 1 }
 });
 
