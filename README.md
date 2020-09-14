@@ -24,7 +24,7 @@ const group = this.UI.createGroup('rootGroup');
 const icon = group.createIcon(MREUI.MediaIcons.Play, {
 	name: "playBtn",
 	position: { x: 1 }
-}).addBehavior('released', () => play())
+}).addBehavior('released', () => play());
 
 const label = group.createLabel('Play', {
 	position: { x: 1, y: 1 }
