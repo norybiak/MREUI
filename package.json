@@ -1,0 +1,32 @@
+{
+  "name": "mre-ui",
+  "author": "NorybiaK",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "main": "built/index.js",
+  "type": "built/index.d.ts",
+  "engines": {
+    "node": ">=8.12.0",
+    "npm": ">=6.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "tsc --build --clean",
+    "build": "tsc --build",
+    "lint": "tslint -p ./tsconfig.json src/**/*.ts",
+    "start": "node .",
+    "debug": "node --nolazy --inspect-brk=9229 ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@microsoft/mixed-reality-extension-sdk": "^0.20.0",
+    "@types/node": "^10.17.24",
+    "deepmerge": "^4.2.2"
+  }
+}

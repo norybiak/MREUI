@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+	"skipLibCheck": true,
+  "target": "es2017",
+	"lib": [
+      "es2017"
+    ],
+  "module": "commonjs",
+  "declaration": true, /* Generates corresponding '.d.ts' file. */
+  "declarationMap": true, /* Generates a sourcemap for each corresponding '.d.ts' file. */
+  "sourceMap": true, /* Generates corresponding '.map' file. */
+  "outDir": "./built",
+  "strict": true,
+  "noImplicitAny": true,
+  "strictNullChecks": false,
+  "allowSyntheticDefaultImports": true,
+  "moduleResolution": "node",
+  "esModuleInterop": true
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
