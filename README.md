@@ -45,7 +45,7 @@ groupScale: number
 #### Returns a new Icon object
 #### Methods
 ```
-Icon.addBeheavior(action: string, actionHandler: () => {})
+Icon.addBehavior(action: string, actionHandler: () => {})
 
 actions:
 
