@@ -17,7 +17,9 @@ const UI = new MREUI.UI(this.context, {
 	scale: 1
 });
 
+// 'iconPacks' or your own custom folder should be inside ./public
 await this.UI.loadIconPack(`${this.baseUrl}/iconPacks/media`);
+//await this.UI.loadIconPack(`${this.baseUrl}/myIconPack`);
 
 const group = this.UI.createGroup('rootGroup');
 
