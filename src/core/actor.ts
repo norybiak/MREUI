@@ -13,6 +13,7 @@ export interface ActorOptions {
     enabled?: boolean,
     mask?: MRE.GroupMask,
     material?: MRE.Material,
+    mesh?: MRE.Mesh,
     parentId?: MRE.Guid,
     actor?: Partial<MRE.ActorLike>,
 
@@ -117,12 +118,12 @@ export abstract class Actor {
         let scale = (options.scale !== undefined) ? options.scale : { x: 1, y: 1, z: 1 };
         let mask = (options.mask !== undefined) ? options.mask : true;
         let enabled = (options.enabled !== undefined) ? options.enabled : mask;
-        let parentId = (options.parentId !== undefined) ? options.parentId : MRE.ZeroGuid;
-
-        console.log(scale);
+        let parentId = (options.parentId !== undefined) ? options.parentId : undefined;
+        let actor = (options.actor !== undefined) ? options.actor : {};
 
         let appearanceLike: Partial<MRE.AppearanceLike> = {
-            enabled
+            enabled,
+            ...((actor.appearance !== undefined) && actor.appearance)
         }
 
         let transformLike: Partial<MRE.ActorTransformLike> = {
@@ -130,7 +131,8 @@ export abstract class Actor {
                 position,
                 rotation,
                 scale
-            }
+            },
+            ...((actor.transform !== undefined) && actor.transform)
         }
 
         return {
@@ -138,7 +140,7 @@ export abstract class Actor {
             parentId: parentId,
             appearance: appearanceLike,
             transform: transformLike,
-            ...options.actor
+            ...actor
         };
 
     }

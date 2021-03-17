@@ -15,8 +15,7 @@ export class Icon extends Element {
         this._name = options.name;
 
         let actorLike = merge(defaultActorLike, refinedActorLike);
-
-        console.log(JSON.stringify(actorLike, null, 4));
+        
         this.createActor(context, actorLike);
 
     }
